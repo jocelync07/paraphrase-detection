@@ -1,0 +1,95 @@
+{
+  "config": {
+    "train": 5000,
+    "test": 1000,
+    "seed": 42,
+    "sbert_epochs": 1,
+    "bert_epochs": 3
+  },
+  "baselines": {
+    "Naive Bayes": {
+      "accuracy": 0.722,
+      "precision": 0.6768149882903981,
+      "recall": 0.6736596736596736,
+      "f1": 0.6752336448598131,
+      "macro_f1": 0.7161133259264101,
+      "balanced_accuracy": 0.7159892063569822,
+      "cv_accuracy_mean": 0.7172000000000001,
+      "cv_accuracy_std": 0.015535765188750775
+    },
+    "Logistic regression": {
+      "accuracy": 0.761,
+      "precision": 0.7513227513227513,
+      "recall": 0.662004662004662,
+      "f1": 0.7038413878562577,
+      "macro_f1": 0.751753049334667,
+      "balanced_accuracy": 0.7486905972019807,
+      "cv_accuracy_mean": 0.752,
+      "cv_accuracy_std": 0.00981835016690687
+    },
+    "Majority class": {
+      "accuracy": 0.571,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "macro_f1": 0.3634627625716104,
+      "balanced_accuracy": 0.5
+    }
+  },
+  "sentence_bert": {
+    "before": {
+      "recall@1": 0.752913752913753,
+      "recall@5": 1.0,
+      "mrr": 0.8663170163170163,
+      "accuracy": 0.622,
+      "precision": 0.6208530805687204,
+      "recall": 0.30536130536130535,
+      "f1": 0.409375,
+      "macro_f1": 0.5657169117647058,
+      "balanced_accuracy": 0.5826281132760993,
+      "threshold": 0.9930204749107361,
+      "similarity_gap": 0.010246992111206055
+    },
+    "after": {
+      "recall@1": 0.8088578088578089,
+      "recall@5": 1.0,
+      "mrr": 0.8991841491841492,
+      "accuracy": 0.732,
+      "precision": 0.676923076923077,
+      "recall": 0.717948717948718,
+      "f1": 0.6968325791855203,
+      "macro_f1": 0.7283446050049465,
+      "balanced_accuracy": 0.730252817818492,
+      "threshold": 0.9306125640869141,
+      "similarity_gap": 0.12257003784179688
+    }
+  },
+  "distilbert": {
+    "accuracy": 0.579,
+    "precision": 0.5122699386503068,
+    "recall": 0.38927738927738925,
+    "f1": 0.4423841059602649,
+    "macro_f1": 0.5521157477592489,
+    "balanced_accuracy": 0.5554092725721447,
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.6861077114105225,
+        "test_accuracy": 0.564,
+        "minutes": 14.251697850227355
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.6570800020217895,
+        "test_accuracy": 0.571,
+        "minutes": 7.741385106245676
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.5593733375549317,
+        "test_accuracy": 0.579,
+        "minutes": 47.06958561738332
+      }
+    ]
+  }
+}
